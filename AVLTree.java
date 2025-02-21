@@ -1,5 +1,5 @@
 /*
- * *** Sulaiman Mohamed / 400 001 ***
+ * *** Sulaiman Mohamed / 272-001 ***
  *
  * This java file is a Java object implementing simple AVL Tree.
  * You are to complete the deleteElement method.
@@ -52,8 +52,8 @@ class LUC_AVLTree {
         if (node == null) return true;
 
         if ((node.leftChild != null && maxValue(node.leftChild) > node.value) ||
-            (node.rightChild != null && minValue(node.rightChild) < node.value) ||
-            !isBST(node.leftChild) || !isBST(node.rightChild)) {
+                (node.rightChild != null && minValue(node.rightChild) < node.value) ||
+                !isBST(node.leftChild) || !isBST(node.rightChild)) {
             return false;
         }
 
@@ -219,16 +219,6 @@ class LUC_AVLTree {
         return y;
     }
 
-    private Node RLRotation(Node x) {
-        Node y = x.rightChild;
-        Node z = x.rightChild.leftChild;
-        y.leftChild = z.rightChild;
-        x.rightChild = z.leftChild;
-        z.rightChild = y;
-        z.leftChild = x;
-
-        x.height = getMaxHeight(getHeight(x.leftChild), getHeight(x.rightChild)) + 1;
-        y.height = getMaxHeight
     private Node RLRotation(Node x) {
         Node y = x.rightChild;
         Node z = x.rightChild.leftChild;
